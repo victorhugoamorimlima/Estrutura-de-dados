@@ -1,0 +1,7 @@
+Esse artigo da Preditive.ai fala basicamente sobre os desafios que existem hoje na análise de dados. Ele mostra que hoje em dia a quantidade de dados cresce muito rápido, tipo num nível absurdo, e isso acaba dificultando tanto pra armazenar quanto pra analisar tudo com eficiência. Por causa disso, é necessário usar formas organizadas de guardar e processar esses dados, como listas e arrays, que ajudam a lidar com grandes volumes.
+
+Outro ponto que o texto destaca é a velocidade. Hoje tudo precisa ser analisado quase em tempo real, então entram estruturas como filas, que ajudam a processar dados que chegam o tempo todo, tipo um fluxo contínuo. Também fala sobre a qualidade dos dados, porque se os dados estiverem errados ou bagunçados, as decisões também vão estar erradas. Aí entram coisas como tabelas, conjuntos e hash, que ajudam a organizar melhor e evitar dados duplicados ou inconsistentes.
+
+Além disso, o artigo comenta sobre a dificuldade de juntar dados de várias fontes diferentes. Nesse caso, estruturas como grafos e mapas ajudam a conectar essas informações e fazer sentido delas. Por fim, ele fala da inteligência artificial, que depende muito de dados bem organizados, usando estruturas como árvores e matrizes pra funcionar direito.
+
+Resumindo, o texto mostra que sem usar bem as estruturas de dados fica muito difícil lidar com tudo isso, porque elas são a base pra organizar, processar e analisar os dados de forma eficiente hoje em dia.
