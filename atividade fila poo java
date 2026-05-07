@@ -1,0 +1,130 @@
+Atividade 2 — Exercícios sobre Filas (Queue) em Java
+
+Exercício 1 — Fila de Números
+
+Neste exercício utilizei Queue para criar uma fila simples de números inteiros. Foram adicionados os números de 1 até 5 usando offer() e depois removidos utilizando poll().
+
+Exemplo de código:
+
+Queue<Integer> fila = new LinkedList<>();
+fila.offer(1);
+fila.offer(2);
+fila.offer(3);
+fila.offer(4);
+fila.offer(5);
+while (!fila.isEmpty()) {
+    System.out.println(
+        "Removendo: " + fila.poll()
+    );
+}
+
+
+Exercício 2 — Fila de Supermercado
+
+Neste exercício foi simulada uma fila de supermercado utilizando Queue. Os clientes eram atendidos na mesma ordem em que entravam na fila.
+
+Exemplo de código:
+
+Queue<String> clientes = new LinkedList<>();
+clientes.offer("João");
+clientes.offer("Maria");
+clientes.offer("Pedro");
+System.out.println(clientes);
+while (!clientes.isEmpty()) {
+    System.out.println(
+        "Atendendo: " + clientes.poll()
+    );
+}
+
+
+Exercício 3 — Menu de Atendimento
+
+Neste exercício foi criado um sistema de atendimento utilizando Scanner e Queue. O usuário podia adicionar nomes, atender pessoas ou visualizar a fila.
+
+Exemplo de código:
+
+if (comando.equals("fila")) {
+    System.out.println(
+        "Fila atual: " + fila
+    );
+}
+else if (comando.equals("atender")) {
+    System.out.println(
+        "Atendendo: " + fila.poll()
+    );
+}
+
+
+Exercício 4 — PriorityQueue com Números Aleatórios
+
+Neste exercício utilizei PriorityQueue para organizar automaticamente os números em ordem crescente.
+
+Exemplo de código:
+
+PriorityQueue<Integer> fila = new PriorityQueue<>();
+fila.offer(50);
+fila.offer(10);
+fila.offer(30);
+while (!fila.isEmpty()) {
+    System.out.println(
+        fila.poll()
+    );
+}
+
+
+Exercício 5 — Sistema de Atendimento com Duas Filas
+
+Neste exercício foram utilizadas duas filas: uma prioritária e outra normal. O sistema seguia a regra de atender dois prioritários e depois um normal.
+
+Exemplo de código:
+
+Queue<String> filaPrioritaria = new LinkedList<>();
+Queue<String> filaNormal = new LinkedList<>();
+filaPrioritaria.offer("Sr. José");
+filaPrioritaria.offer("Dona Maria");
+filaNormal.offer("João");
+filaNormal.offer("Carlos");
+
+
+Exercício 6 — Processador de Tarefas com Prioridade
+
+Neste exercício foi utilizada uma PriorityQueue para organizar tarefas automaticamente de acordo com a prioridade.
+
+Exemplo de código:
+
+PriorityQueue<Tarefa> tarefas =
+new PriorityQueue<>();
+tarefas.offer(
+    new Tarefa("Backup", 2)
+);
+tarefas.offer(
+    new Tarefa("Reiniciar servidor", 1)
+);
+
+
+Exercício 7 — Fila de Impressão com Cancelamento
+
+Neste exercício foi simulada uma fila de impressão utilizando LinkedList. O sistema permitia adicionar documentos, imprimir e cancelar arquivos da fila.
+
+Exemplo de código:
+
+LinkedList<String> fila =
+new LinkedList<>();
+fila.add("Relatorio.pdf");
+fila.add("Planilha.xlsx");
+fila.remove("Relatorio.pdf");
+
+
+Exercício 8 — Call Center com Níveis de Atendimento
+
+Neste exercício foi desenvolvido um sistema de call center utilizando três filas diferentes para representar os níveis de atendimento.
+
+Exemplo de código:
+
+Queue<String> nivel1 =
+new LinkedList<>();
+Queue<String> nivel2 =
+new LinkedList<>();
+Queue<String> nivel3 =
+new LinkedList<>();
+nivel1.offer("Problema na internet");
