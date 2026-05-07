@@ -1,0 +1,176 @@
+Atividade 3 — Pilhas em Java e Torre de Hanói
+
+Questão 1 — Conceito de Pilha
+
+A estrutura de pilha segue o conceito LIFO (Last In, First Out), ou seja, o último elemento inserido é o primeiro a sair.
+
+Exemplo de código:
+
+Stack<Integer> pilha = new Stack<>();
+pilha.push(10);
+pilha.push(20);
+pilha.push(30);
+System.out.println(pilha.pop());
+
+⸻
+
+Questão 2 — Método push()
+
+O método push() é utilizado para adicionar elementos no topo da pilha.
+
+Exemplo de código:
+
+Stack<String> pilha = new Stack<>();
+pilha.push("Java");
+pilha.push("Python");
+
+⸻
+
+Questão 3 — Método pop()
+
+O método pop() remove o elemento do topo da pilha e retorna o valor removido.
+
+Exemplo de código:
+
+Stack<Integer> pilha = new Stack<>();
+pilha.push(100);
+pilha.push(200);
+System.out.println(
+    pilha.pop()
+);
+
+⸻
+
+Questão 4 — Método peek()
+
+O método peek() mostra o elemento do topo sem removê-lo da pilha.
+
+Exemplo de código:
+
+Stack<String> pilha = new Stack<>();
+pilha.push("Notebook");
+System.out.println(
+    pilha.peek()
+);
+
+⸻
+
+Questão 5 — Método isEmpty()
+
+O método isEmpty() verifica se a pilha está vazia.
+
+Exemplo de código:
+
+Stack<Integer> pilha = new Stack<>();
+System.out.println(
+    pilha.isEmpty()
+);
+
+⸻
+
+Questão 6 — EmptyStackException
+
+Quando tentamos remover elementos de uma pilha vazia utilizando pop(), o Java lança a exceção EmptyStackException.
+
+Exemplo de código:
+
+Stack<Integer> pilha = new Stack<>();
+pilha.pop();
+
+⸻
+
+Questão 7 — Aplicação das Pilhas
+
+As pilhas são muito utilizadas no controle de chamadas de métodos e recursão em Java.
+
+Exemplo de código:
+
+public static void teste() {
+    System.out.println("Método executado");
+}
+
+⸻
+
+Questão 8 — Criação correta de uma Pilha
+
+A forma correta de criar uma pilha em Java utilizando generics é:
+
+Exemplo de código:
+
+Stack<Integer> pilha =
+new Stack<>();
+
+⸻
+
+Torre de Hanói
+
+Conceito
+
+A Torre de Hanói é um problema clássico de recursão criado pelo matemático francês Édouard Lucas em 1883.
+
+O objetivo é mover todos os discos de uma haste para outra utilizando uma haste auxiliar, respeitando as regras:
+
+* Apenas um disco pode ser movido por vez
+* Apenas o disco do topo pode ser movimentado
+* Um disco maior nunca pode ficar sobre um menor
+
+⸻
+
+Fórmula de Movimentos
+
+A fórmula utilizada para calcular o número mínimo de movimentos é:
+
+M(n)=2^n-1
+
+Exemplo com 3 discos:
+
+2^3-1=7
+
+⸻
+
+Complexidade do Algoritmo
+
+A complexidade da Torre de Hanói é exponencial:
+
+O(2^n)
+
+⸻
+
+Exemplo de Código Recursivo
+
+Neste exemplo o método chama a si mesmo para resolver subproblemas menores, característica principal da recursão.
+
+Exemplo de código:
+
+public static void moverDiscos(
+int n,
+char origem,
+char destino,
+char auxiliar
+) {
+    if (n == 1) {
+        System.out.println(
+            "Mover disco de " +
+            origem + " para " +
+            destino
+        );
+        return;
+    }
+    moverDiscos(
+        n - 1,
+        origem,
+        auxiliar,
+        destino
+    );
+    System.out.println(
+        "Mover disco de " +
+        origem + " para " +
+        destino
+    );
+    moverDiscos(
+        n - 1,
+        auxiliar,
+        destino,
+        origem
+    );
+}
