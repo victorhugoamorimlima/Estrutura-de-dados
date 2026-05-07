@@ -1,0 +1,136 @@
+Atividade 1 — Exercícios sobre Listas em Java
+
+Exercício 1 — Lista de Cores
+
+Neste exercício utilizei ArrayList para armazenar 5 cores diferentes. Depois percorri a lista utilizando for-each para mostrar todas as cores na tela.
+
+Exemplo de código:
+
+ArrayList<String> cores = new ArrayList<>();
+cores.add("Azul");
+cores.add("Vermelho");
+cores.add("Verde");
+cores.add("Preto");
+cores.add("Branco");
+for (String cor : cores) {
+    System.out.println(cor);
+}
+
+
+Exercício 2 — Soma de Números
+
+Neste exercício criei uma lista de números inteiros e utilizei um laço for para adicionar os números de 1 até 10. Depois percorri a lista somando todos os valores.
+
+Exemplo de código:
+
+ArrayList<Integer> numeros = new ArrayList<>();
+for (int i = 1; i <= 10; i++) {
+    numeros.add(i);
+}
+int soma = 0;
+for (Integer numero : numeros) {
+    soma += numero;
+}
+System.out.println("Soma: " + soma);
+
+
+Exercício 3 — Cadastro até “fim”
+
+Neste exercício utilizei Scanner para receber nomes digitados pelo usuário. O programa continuava executando até o usuário digitar “fim”.
+
+Exemplo de código:
+
+Scanner sc = new Scanner(System.in);
+ArrayList<String> nomes = new ArrayList<>();
+while (true) {
+    String nome = sc.nextLine();
+    if (nome.equals("fim")) {
+        break;
+    }
+    nomes.add(nome);
+}
+
+
+Exercício 4 — Removendo números pequenos
+
+Neste exercício removi todos os números menores que 10 de uma lista.
+
+Exemplo de código:
+
+for (int i = lista.size() - 1; i >= 0; i--) {
+    if (lista.get(i) < 10) {
+        lista.remove(i);
+    }
+}
+
+
+Exercício 5 — Cadastro de Produtos
+
+Neste exercício utilizei duas listas: uma para nomes dos produtos e outra para preços.
+
+Exemplo de código:
+
+ArrayList<String> produtos = new ArrayList<>();
+ArrayList<Double> precos = new ArrayList<>();
+produtos.add("Mouse");
+precos.add(80.0);
+produtos.add("Teclado");
+precos.add(120.0);
+
+
+Exercício 6 — Agenda de Contatos
+
+Neste exercício foi criada uma agenda simples utilizando listas para armazenar nomes e telefones. O sistema permitia adicionar, buscar, remover e listar contatos através de um menu.
+
+Exemplo de código:
+
+ArrayList<String> nomes = new ArrayList<>();
+ArrayList<String> telefones = new ArrayList<>();
+nomes.add("João");
+telefones.add("11999999999");
+
+
+Exercício 7 — Gerenciador de Tarefas
+
+Neste exercício criei um gerenciador de tarefas com prioridade utilizando listas paralelas.
+
+Exemplo de código:
+
+ArrayList<String> tarefas = new ArrayList<>();
+ArrayList<Integer> prioridades = new ArrayList<>();
+tarefas.add("Estudar Java");
+prioridades.add(1);
+
+
+Exercício 8 — Remover Duplicatas
+
+Neste exercício o programa removia números repetidos de uma lista mantendo apenas a primeira ocorrência.
+
+Exemplo de código:
+
+if (!listaFinal.contains(numero)) {
+    listaFinal.add(numero);
+}
+
+
+Exercício 9 — Filas usando LinkedList
+
+Neste exercício utilizei LinkedList para simular uma fila de atendimento.
+
+Exemplo de código:
+
+LinkedList<String> fila = new LinkedList<>();
+fila.addLast("João");
+fila.addLast("Maria");
+System.out.println(fila.removeFirst());
+
+
+Exercício 10 — Lista de Tarefas com Arquivo
+
+Neste exercício foi criada uma lista de tarefas utilizando arquivo .txt para salvar as informações.
+
+Exemplo de código:
+
+FileWriter writer = new FileWriter("tarefas.txt");
+writer.write("Estudar Java");
+writer.close();
